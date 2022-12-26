@@ -8,7 +8,7 @@ init();
 async function init() {
   const server = Hapi.server({
     port: 80,
-    host: "notes-app-back-end-three.vercel.app",
+    host: process.env.NODE_ENV !== "production" ? "localhost" : "0.0.0.0",
     routes: {
       cors: {
         origin: ["*"],
