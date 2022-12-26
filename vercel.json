@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 5,
-      "memory": 128
-    }
-  },
   "version": 2,
   "builds": [
     {
