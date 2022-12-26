@@ -4,5 +4,18 @@
       "maxDuration": 5,
       "memory": 128
     }
-  }
+  },
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/server.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/server.js"
+    }
+  ]
 }

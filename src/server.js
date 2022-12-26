@@ -3,6 +3,8 @@ const process = require("process");
 const { router } = require("./routes");
 const { rootHandler, NotesHanlder } = require("./handler");
 
+init();
+
 async function init() {
   const server = Hapi.server({
     port: 5000,
@@ -29,5 +31,3 @@ process.on("unhandledRejection", (err) => {
   console.log(err);
   process.exit(1);
 });
-
-module.exports = { init };
